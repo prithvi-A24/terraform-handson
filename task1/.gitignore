@@ -1,0 +1,13 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+
+# Variable files (don't commit secrets)
+*.tfvars
+*.tfvars.json
+
+# IDE files
+.vscode/
+.idea/
