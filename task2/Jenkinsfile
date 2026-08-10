@@ -1,0 +1,44 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Terraform Init') {
+            steps {
+                dir('task1') {
+                    sh 'terraform init'
+                }
+            }
+        }
+
+        stage('Terraform Format') {
+            steps {
+                dir('task1') {
+                    sh 'terraform fmt -check'
+                }
+            }
+        }
+
+        stage('Terraform Validate') {
+            steps {
+                dir('task1') {
+                    sh 'terraform validate'
+                }
+            }
+        }
+
+        stage('Terraform Plan') {
+            steps {
+                dir('task1') {
+                    sh 'terraform plan'
+                }
+            }
+        }
+    }
+}
