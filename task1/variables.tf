@@ -18,7 +18,7 @@ variable "zone" {
 variable "machine_type" {
   description = "Machine type for VM instances"
   type        = string
-  default     = "e2-micro"
+  default     = "e2-small"
 }
 
 variable "network" {
