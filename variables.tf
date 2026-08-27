@@ -37,7 +37,7 @@ variable "vm_name" {
 variable "vm_machine_type" {
   description = "The machine type for the VM"
   type        = string
-  default     = "e2-micro"
+  default     = "e2-medium"
 }
 
 variable "zone" {
